@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="card">
+    <text class="text-title">我的信息</text>
+    <text class="text-body">ID: {{userInfo.id || '未登录'}}</text>
+  </view>
+  <view class="btn-primary" bindtap="onLogout" style="margin-top: 48rpx;">退出登录</view>
+</view>

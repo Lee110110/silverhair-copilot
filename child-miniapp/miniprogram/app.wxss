@@ -1,0 +1,54 @@
+/* Global styles */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFF8E1;
+  color: #212121;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  background-color: #E53935;
+  color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 24rpx 48rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-secondary {
+  background-color: #43A047;
+  color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 24rpx 48rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.text-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #212121;
+}
+
+.text-body {
+  font-size: 28rpx;
+  color: #212121;
+}
+
+.text-caption {
+  font-size: 24rpx;
+  color: #757575;
+}

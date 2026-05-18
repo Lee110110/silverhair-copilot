@@ -1,0 +1,58 @@
+.sos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 48rpx;
+}
+
+.idle-state, .accepted-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert-icon {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background: #E53935;
+  color: white;
+  font-size: 72rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120rpx;
+  margin-bottom: 32rpx;
+  animation: pulse 1s infinite;
+}
+
+.alert-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #E53935;
+  margin-bottom: 16rpx;
+}
+
+.accept-btn {
+  margin-top: 48rpx;
+  width: 400rpx;
+}
+
+.call-btn {
+  margin-top: 24rpx;
+  width: 400rpx;
+  background-color: #1976D2;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

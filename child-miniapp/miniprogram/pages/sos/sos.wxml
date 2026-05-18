@@ -1,0 +1,19 @@
+<view class="sos-container">
+  <view wx:if="{{status === 'idle'}}" class="idle-state">
+    <text class="text-title">暂无求助</text>
+    <text class="text-caption">老人按SOS按钮后，这里会收到通知</text>
+  </view>
+
+  <view wx:elif="{{status === 'alerting'}}" class="alert-state">
+    <view class="alert-icon">!</view>
+    <text class="alert-title">老人正在求助！</text>
+    <text class="text-body">请尽快回应</text>
+    <view class="btn-primary accept-btn" bindtap="onAcceptSos">立即帮助</view>
+    <view class="btn-secondary call-btn" bindtap="onCallElderly">打电话</view>
+  </view>
+
+  <view wx:elif="{{status === 'accepted'}}" class="accepted-state">
+    <text class="text-title">已接受求助</text>
+    <text class="text-body">正在连接共屏...</text>
+  </view>
+</view>

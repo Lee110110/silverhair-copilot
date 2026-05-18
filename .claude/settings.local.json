@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import aiosqlite\")",
+      "Bash(ipconfig)",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 install -r \"c:\\\\Users\\\\Elvis\\\\silverhair-copilot\\\\elderly_app\\\\build\\\\app\\\\outputs\\\\flutter-apk\\\\app-debug.apk\")",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 shell am start -n com.silverhair.elderly_app/.MainActivity)",
+      "Bash(curl -s http://10.30.2.198:8000/api/v1/auth/sms/send -X POST -H \"Content-Type: application/json\" -d \"{\\\\\"phone\\\\\": \\\\\"13900009999\\\\\"}\")",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 logcat -c)",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 shell am force-stop com.silverhair.elderly_app)",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 logcat -d -s flutter)",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 logcat -d)",
+      "Bash(\"C:/Users/Elvis/AppData/Local/Android/Sdk/platform-tools/adb.exe\" -s 8640b1b5 shell dumpsys window windows)",
+      "PowerShell(& \"C:\\\\Users\\\\Elvis\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe\" devices 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Elvis\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe\" -s 8640b1b5 install -r \"C:\\\\Users\\\\Elvis\\\\silverhair-copilot\\\\elderly_app\\\\build\\\\app\\\\outputs\\\\flutter-apk\\\\app-debug.apk\" 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Elvis\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe\" -s 8640b1b5 shell \"appops set com.silverhair.elderly_app SYSTEM_ALERT_WINDOW allow\" 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Elvis\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe\" -s 10CE8N0UD6002KS install -r \"C:\\\\Users\\\\Elvis\\\\silverhair-copilot\\\\child_app\\\\build\\\\app\\\\outputs\\\\flutter-apk\\\\app-debug.apk\" 2>&1)",
+      "Bash(python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 --log-level info)",
+      "Bash(tasklist /FI \"IMAGENAME eq python.exe\" /FO CSV)",
+      "Bash(findstr /i \"python\")",
+      "Bash(powershell -Command \"Get-Process python -ErrorAction SilentlyContinue | Select-Object Id, ProcessName, Path | Format-Table\")",
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | Select-Object OwningProcess | Format-Table\")",
+      "Bash(powershell -Command \"Stop-Process -Id 55604 -Force\")",
+      "Bash(python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-level info)",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 3; Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty OwningProcess\")",
+      "PowerShell(Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue)",
+      "Bash(curl -s http://10.30.2.198:8000/)",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:8000/docs\" -Method Get -ErrorAction SilentlyContinue)",
+      "Bash(powershell -Command \"Remove-Item 'C:\\\\Users\\\\Elvis\\\\silverhair-copilot\\\\backend\\\\check_db.py' -Force\")",
+      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)",
+      "PowerShell(curl -s http://localhost:8000/)",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:8000/\" -Method Get)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\Elvis\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Elvis-silverhair-copilot\\\\cfbf1e04-dc0a-4392-9a1c-0bcc8dea545b\\\\tasks\\\\b6zj10nhu.output' -Wait -Tail 50\")",
+      "Bash(findstr \"IPv4\")",
+      "Bash(curl -s http://10.30.2.198:8000/api/v1/coscreen/pending -H \"Authorization: Bearer test\")"
+    ]
+  }
+}

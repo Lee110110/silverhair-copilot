@@ -1,0 +1,42 @@
+<view class="container">
+  <!-- SOS Alert Banner -->
+  <view wx:if="{{hasSosAlert}}" class="sos-banner" bindtap="onAcceptSos">
+    <text class="sos-banner-title">🚨 SOS 求助警报！</text>
+    <text class="sos-banner-desc">您的家人正在求助，点击立即响应</text>
+    <view class="sos-banner-actions">
+      <view class="btn-accept">接受求助</view>
+      <view class="btn-call" bindtap="onCallElderly" catchtap="onCallElderly">拨打电话</view>
+    </view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading">
+    <text class="text-caption">加载中...</text>
+  </view>
+
+  <view wx:elif="{{!hasLinked}}" class="empty-state">
+    <text class="text-title">还没有绑定老人</text>
+    <text class="text-caption">请在老人手机上打开"银发陪驾"App，获取邀请码后输入</text>
+    <view class="btn-primary" bindtap="onBindElderly">输入邀请码绑定</view>
+  </view>
+
+  <view wx:else>
+    <view class="header">
+      <text class="text-title">我的守护</text>
+      <view class="bind-btn" bindtap="onBindElderly">
+        <text>+ 绑定</text>
+      </view>
+    </view>
+
+    <view wx:for="{{elderlyList}}" wx:key="id" class="card elderly-card">
+      <view class="card-header">
+        <text class="text-title">{{item.elderly_id}}</text>
+        <text class="text-caption">已绑定</text>
+      </view>
+      <view class="card-actions">
+        <view class="btn-secondary" data-id="{{item.elderly_id}}" bindtap="onStartCoScreen">
+          共屏指引
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

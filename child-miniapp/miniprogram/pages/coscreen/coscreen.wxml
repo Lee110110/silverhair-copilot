@@ -1,0 +1,35 @@
+<view class="coscreen-container">
+  <!-- Status bar -->
+  <view class="status-bar">
+    <text class="status-text">{{connected ? '已连接 - 正在守护' : '连接中...'}}</text>
+    <view class="end-btn" bindtap="endSession">结束</view>
+  </view>
+
+  <!-- Screen frame canvas (bottom layer) -->
+  <canvas type="2d" id="frameCanvas" class="frame-canvas"
+    style="width: 100%; height: calc(100vh - 240rpx);">
+  </canvas>
+
+  <!-- Annotation canvas (top layer, transparent) -->
+  <canvas type="2d" id="annotationCanvas" class="annotation-canvas"
+    style="width: 100%; height: calc(100vh - 240rpx);"
+    bindtouchstart="onAnnotationStart"
+    bindtouchmove="onAnnotationMove"
+    bindtouchend="onAnnotationEnd">
+  </canvas>
+
+  <!-- Annotation toolbar -->
+  <view class="toolbar">
+    <view wx:for="{{tools}}" wx:key="id"
+      class="tool-btn {{tool === item.id ? 'active' : ''}}"
+      data-tool="{{item.id}}"
+      bindtap="onToolChange">
+      <text class="tool-icon">{{item.icon}}</text>
+      <text class="tool-name">{{item.name}}</text>
+    </view>
+    <view class="tool-btn" bindtap="onClearAnnotations">
+      <text class="tool-icon">✕</text>
+      <text class="tool-name">清除</text>
+    </view>
+  </view>
+</view>
